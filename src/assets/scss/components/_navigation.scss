@@ -1,0 +1,46 @@
+$offcanvas-full-screen-bg: #a7cb00;
+$offcanvas-full-screen-side: right;
+$offcanvas-full-screen-closebutton-size: 5rem;
+
+.offcanvas-full-screen {
+  @include off-canvas-base($background: $offcanvas-full-screen-bg, $transition: 0.3s ease-in-out);
+  @include off-canvas-position($position: $offcanvas-full-screen-side);
+}
+
+.offcanvas-full-screen-inner {
+  padding: 1rem;
+  text-align: center;
+}
+
+.offcanvas-full-screen-menu {
+  @include menu-base;
+  @include menu-direction(vertical);
+
+  a {
+    color: $black;
+
+    &:hover {
+      color: darken($white, 30%);
+    }
+  }
+}
+
+.offcanvas-full-screen-close {
+  color: $white;
+  font-size: $offcanvas-full-screen-closebutton-size;
+
+  &:hover {
+    color: darken($white, 30%);
+  }
+}
+
+.off-canvas-content {
+    width: 100%;
+    .top-bar {
+        background-color: $black;
+        .top-bar-title {
+            color: $white;
+        }
+    }
+}
+
